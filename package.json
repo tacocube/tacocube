@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack && node server.js",
+    "adduser": "node scripts/adduser.js",
+    "deleteuser": "node scripts/deleteuser.js",
+    "listusers": "node scripts/listusers.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
