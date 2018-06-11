@@ -15,4 +15,27 @@ html
           a(class='nav-link' href='#') Individual
         li(class='nav-item')
           a(class='nav-link' href='#') Contact Us
+      if user
+        div(class='navbar-text') Logged in as #{user.email}
+      else
+        form(
+          class='form-inline'
+          action='/login'
+          method='POST'
+        )
+          input(
+            class='form-control'
+            type='text'
+            name='email'
+            placeholder='e-mail'
+          )
+          input(
+            class='form-control'
+            type='password'
+            name='password'
+          )
+          button(
+            class='btn'
+            type='submit'
+          ) Login
     script(src='index.js')
