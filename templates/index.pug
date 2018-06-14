@@ -3,19 +3,22 @@ html
     meta(charset='utf-8')
     title TacoCube
   body
-    div(class='container bg-dark')
-    nav(class='navbar navbar-expand-md navbar-dark fixed-top bg-dark')
+    div(class='container')
+    nav(class='navbar navbar-expand-sm navbar-dark fixed-top bg-dark')
       a(class='navbar-brand text-uppercase' href="index.pug") TacoCube
       ul(class='navbar-nav mr-auto')
         li(class='nav-item active')
           a(class='nav-link' href='#') Home
         li(class='nav-item')
           a(class='nav-link' href='#') Team
-        li(class='nav-item')
-          a(class='nav-link' href='#') Individual
+        li(class='nav-item dropdown')
+          a(class='nav-link dropdown-toggle' href='#' id='dropdownInd' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Individual
+          div(class='mt-lg-3 dropdown-menu bg-dark' aria-labelledby="dropdownInd")
+            a(class='dropdown-item bg-dark text-white' href='#') Tory
+            a(class='dropdown-item bg-dark text-white' href='#') Mory
         li(class='nav-item')
           a(class='nav-link' href='#') Contact Us
-      br    
+
       if user
         div(class='navbar-text') Logged in as #{user.email}
       else
